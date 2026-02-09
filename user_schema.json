@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "User",
+  "description": "Schema for user documents in Firestore Todo app",
+  "type": "object",
+  "properties": {
+    "email": {
+      "description": "User email address",
+      "type": "string",
+      "format": "email"
+    },
+    "uid": {
+      "description": "Firebase Authentication user UID",
+      "type": "string"
+    },
+    "created_time": {
+      "description": "Timestamp when the user account was created",
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_sign_in": {
+      "description": "Timestamp of the last user sign in",
+      "type": "string",
+      "format": "date-time"
+    },
+    "display_name": {
+      "description": "Optional display name for the user",
+      "type": "string"
+    },
+    "photo_url": {
+      "description": "Optional profile image URL",
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "required": ["email", "uid", "created_time"]
+}
